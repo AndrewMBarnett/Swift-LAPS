@@ -30,15 +30,13 @@ dialog="/Library/Application Support/Dialog/Dialog.app"
 swiftDialogMinimumRequiredVersion="2.3.2.4726"
 dialogVersion=$( /usr/local/bin/dialog --version )
 scriptVersion="1.0"
-CURRENT_USER=$(ls -l /dev/console | awk '{ print $3 }')
 
 # Dialog Icon and Banner
 
-appTitle="Swift LAPS"
-brandingBanner=""                               # Banner image to show behind Title text
+appTitle="Swift LAPS"				# Update the title of the Dialog windows
+brandingBanner=""                               # Banner image to show behind title text
 brandingIconLight="SF=lock.icloud"
 brandingIconDark="SF=lock.icloud.fill"
-
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # JSON file Path
@@ -53,7 +51,6 @@ resultsCommandFile=$( mktemp -u /var/tmp/dialogCommandFileResults.XXX )
 # Operating System, Computer Model Name, etc.
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-CURRENT_USER=$(ls -l /dev/console | awk '{ print $3 }')
 computerNameOfAdmin=$( scutil --get ComputerName )
 DEVICE=`hostname`
 osVersion=$( sw_vers -productVersion )
@@ -68,6 +65,8 @@ currentURL=$(/usr/bin/defaults read /Library/Preferences/com.jamfsoftware.jamf.p
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Login Prompt Variables
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Variables to show on the login window before text is entered 
 
 jamfURLPrompt="Enter Jamf URL"
 jamfUsernamePrompt="Enter Jamf Username"
