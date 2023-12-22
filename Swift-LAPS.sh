@@ -576,6 +576,7 @@ serialNumber=$(echo $DETAILS | awk -F '"Serial Number" : "' '{print$2}' | awk -F
 		
 if [[ $serialNumber == "" ]] || [[ $reason == "" ]] || [[ $USER == "" ]] || [[ $PASSWORD == "" ]] || [[ $URL == "" ]]; then
 	updateScriptLog "Aborting, blank information textfield submitted"
+ 	quitscript
 	exit 1
 fi
 
