@@ -872,7 +872,7 @@ case "${resultsPromptReturnCode}" in
 
     0) # Process exit code 0 scenario here
 if [[ $checkbox == *true* ]]; then 
-      echo $password | pbcopy
+      echo -n "$password" | pbcopy
       updateScriptLog "LAPS copied to Clipboard"
 else
     updateScriptLog "No password copied to Clipboard, Sending Webhook"
