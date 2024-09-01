@@ -3,7 +3,7 @@
 # Author  : Andrew Barnett - https://github.com/AndrewMBarnett
 # Created : 12/08/2023
 # Updated : 12/21/2023
-# Version : v1.0
+# Version : v1.1
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Description:
